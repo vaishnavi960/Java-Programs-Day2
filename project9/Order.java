@@ -6,8 +6,9 @@ public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
     private String pname;
     private int id;
-    private String cname;
-
+    private static String cname;
+//this variable will not be serialized
+    
     Order() {
     	Order.sort(id);
     };
@@ -20,7 +21,7 @@ public class Order implements Serializable {
 	Order(String pname, int id, String cname) {
         this.pname = pname;
         this.id = id;
-        this.cname = cname;
+         Order.cname = cname;
     }
 
     @Override

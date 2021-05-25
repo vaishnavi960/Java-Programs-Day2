@@ -22,7 +22,7 @@ public class ReadWrite {
         
 
         try {
-            FileOutputStream f = new FileOutputStream(new File("myObjects.txt"));
+            FileOutputStream f = new FileOutputStream(new File("orderfile.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
 
             // Write objects to file
@@ -35,7 +35,7 @@ public class ReadWrite {
             o.close();
             f.close();
 
-            FileInputStream fi = new FileInputStream(new File("myObjects.txt"));
+            FileInputStream fi = new FileInputStream(new File("orderfile.txt"));
             ObjectInputStream oi = new ObjectInputStream(fi);
 
             // Read objects
